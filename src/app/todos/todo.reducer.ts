@@ -45,6 +45,8 @@ export const todoReducer = createReducer(
           completado:value
         }
       })
-
+  }),
+  on(TodoAcction.limpiarCompletados,(state) =>{
+    return state.filter( todo => !todo.completado)
   })
 );
